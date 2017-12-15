@@ -11,8 +11,8 @@ watch('./', function(evt, name) {
 });
 
 function sendMessage() {
-  const accountSid = 'ACaac00e6a1127f15ebb41a4346ea3fccb';
-  const authToken = 'faccf776f654b22c20460f04635ecf4e';   
+  const accountSid = process.env.accountSid;
+  const authToken = process.env.authToken;   
 
   let twilio = require('twilio');
   let client = new twilio(accountSid, authToken);
